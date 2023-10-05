@@ -12,10 +12,10 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
+  - floor
+  - Player
+  - Interactable
+  - SnapPoint
   - 
   - 
   - 
