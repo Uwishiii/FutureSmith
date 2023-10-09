@@ -2918,6 +2918,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   demoSword: {fileID: 279717249686810253, guid: d08c59db2e3ff3c4e9692d24e66cda0c,
     type: 3}
+  hitParticle: {fileID: 5545978586641111170, guid: 2c032f381a24a6946a1c72901556d07c,
+    type: 3}
   colliders: []
 --- !u!65 &1421048866
 BoxCollider:

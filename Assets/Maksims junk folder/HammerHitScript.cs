@@ -12,6 +12,7 @@ public class HammerHitScript : MonoBehaviour
     bool guardFound = false;
 
     [SerializeField] GameObject demoSword;
+    [SerializeField] GameObject hitParticle;
 
     [SerializeField] List<Collider> colliders = new List<Collider>();
 
@@ -72,6 +73,11 @@ public class HammerHitScript : MonoBehaviour
         void SpawnWeapon()
         {
             var sword = Instantiate(demoSword, gameObject.transform.position, Quaternion.identity);
+        }
+
+        if (other.gameObject.layer == 9)
+        {
+            var hitParticleInstance = Instantiate(hitParticle, gameObject.transform.position, Quaternion.identity);
         }
     }
 }
