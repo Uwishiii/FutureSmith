@@ -614,6 +614,7 @@ MonoBehaviour:
   redMaterial2: {fileID: 2100000, guid: 80821da51cbaebf429a7a195372336ae, type: 2}
   redMaterial3: {fileID: 2100000, guid: 1968b6f95f2054a4288a32e10f2a4524, type: 2}
   redMaterial4: {fileID: 2100000, guid: 23ef4a48a69a2d84a8267b0db9bc5d30, type: 2}
+  leverControl: {fileID: 1359340461}
 --- !u!1 &135174970
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411807637}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.44, y: 0.47, z: 0.35}
+  m_LocalPosition: {x: 0.44, y: 0.579, z: 0.35}
   m_LocalScale: {x: 41.01162, y: 41.01162, z: 41.01162}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4342,8 +4343,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303016446}
   m_LocalRotation: {x: -0, y: -0.91743124, z: -0, w: 0.39789438}
-  m_LocalPosition: {x: -4.47, y: 1.86, z: -4.14}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalPosition: {x: -4.47, y: 1.575, z: -4.14}
+  m_LocalScale: {x: 1.6, y: 2.2, z: 1.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 411807638}
@@ -4986,6 +4987,7 @@ GameObject:
   - component: {fileID: 1359340456}
   - component: {fileID: 1359340455}
   - component: {fileID: 1359340460}
+  - component: {fileID: 1359340461}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -5261,8 +5263,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -0.2811725
-    max: 46.285385
+    min: -2.9627216
+    max: 61.650524
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -5272,6 +5274,21 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1359340461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359340453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52431892cb95a24aad71d5357b83dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leverHinge: {fileID: 1359340460}
+  onAngle: 45
+  isOn: 0
 --- !u!1 &1455525015
 GameObject:
   m_ObjectHideFlags: 0

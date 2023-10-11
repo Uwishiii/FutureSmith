@@ -16,21 +16,34 @@ public class FurnaceHeating : MonoBehaviour
 
     private bool objectIsDone = false;
 
-    private Renderer currentObjectRenderer; // Store the current object's renderer.
+    private Renderer currentObjectRenderer; //store the object renderer.
+    private Collider currentObjectCollider;
 
 
-    private void OnTriggerEnter(Collider other)
+    public LeverControl leverControl;
+
+
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Cube") || other.CompareTag("Sphere"))
+        if (objectIsDone)
         {
+            other.tag = "done";
+        }
 
-            Renderer renderer = other.GetComponent<Renderer>(); //get renderer of obj to change the material
-            if (renderer != null && !isChangingMaterial)
+        if (!other.CompareTag("done"))
+        {
+            if (other.CompareTag("Cube") || other.CompareTag("Sphere"))
             {
 
-                currentObjectRenderer = renderer; //store the obj renderer
-                isObjectInsideZone = true;
-                StartCoroutine(ChangeMaterialAfterDelay(renderer)); //start coroutine
+                Renderer renderer = other.GetComponent<Renderer>(); //get renderer of obj to change the material
+                if (renderer != null && !isChangingMaterial && leverControl.isOn)
+                {
+
+                    currentObjectRenderer = renderer; //store the obj renderer
+                    currentObjectCollider = other;
+                    isObjectInsideZone = true;
+                    StartCoroutine(ChangeMaterialAfterDelay(renderer)); //start coroutine
+                }
             }
         }
     }
@@ -40,10 +53,6 @@ public class FurnaceHeating : MonoBehaviour
 
         if (other.CompareTag("Cube") || other.CompareTag("Sphere"))
         {
-            if (objectIsDone)
-            {
-            other.tag = "done";
-            }
             if (currentObjectRenderer != null && currentObjectRenderer.gameObject == other.gameObject) //check if the obj that exits the collider is the same as teh one in the coroutine 
             {
                 isObjectInsideZone = false; //stop the couroutine
@@ -57,6 +66,11 @@ public class FurnaceHeating : MonoBehaviour
 
         for (int i = currentMaterialIndex; i <= 4; i++)
         {
+            if(!leverControl.isOn)
+            {
+                isChangingMaterial = false;
+                yield break;
+            }
 
             if (!isObjectInsideZone) //check if obj is still inside before changing material
             {
@@ -77,13 +91,12 @@ public class FurnaceHeating : MonoBehaviour
                     renderer.material = redMaterial3;
                     break;
                 case 3:
-                    renderer.material = redMaterial4;
+                    renderer.material = redMaterial4; 
                     break;
                 case 4:
                     renderer.material = redMaterial4;
-                    objectIsDone = true;
+                    currentObjectCollider.tag = "done";
                     break;
-
             }
 
 
