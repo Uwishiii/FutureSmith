@@ -8,6 +8,8 @@ TagManager:
   - Sphere
   - done
   - Hammer
+  - flat
+  - sharpening
   layers:
   - Default
   - TransparentFX

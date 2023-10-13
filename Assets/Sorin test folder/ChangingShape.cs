@@ -26,6 +26,7 @@ public class ChangingShape : MonoBehaviour
             else if (hits == 2)
             {
                 cubeTransform.localScale = new Vector3(0.8f, 0.1f, 0.8f);
+                gameObject.tag = "flat";
             }
 
             hits++; 
