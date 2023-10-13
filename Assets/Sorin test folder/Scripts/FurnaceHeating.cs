@@ -8,11 +8,12 @@ public class FurnaceHeating : MonoBehaviour
     public Material redMaterial1;
     public Material redMaterial2;
     public Material redMaterial3;
-    public Material redMaterial4;
+    public Material redMaterial4;   
 
     private bool isChangingMaterial = false;
     private bool isObjectInsideZone = false; //track if obj is inside collider zone
     private int currentMaterialIndex = 0; //current material
+    private bool flatCheck = false; 
 
     private bool objectIsDone = false;
 
@@ -32,8 +33,12 @@ public class FurnaceHeating : MonoBehaviour
 
         if (!other.CompareTag("done"))
         {
-            if (other.CompareTag("Cube") || other.CompareTag("Sphere"))
+            if (other.CompareTag("Cube") || other.CompareTag("Sphere") || other.CompareTag("flat"))
             {
+                if (other.CompareTag("flat"))
+                {
+                    flatCheck = true;
+                }
 
                 Renderer renderer = other.GetComponent<Renderer>(); //get renderer of obj to change the material
                 if (renderer != null && !isChangingMaterial && leverControl.isOn)
@@ -95,13 +100,21 @@ public class FurnaceHeating : MonoBehaviour
                     break;
                 case 4:
                     renderer.material = redMaterial4;
-                    currentObjectCollider.tag = "done";
+                    if (flatCheck)
+                    {
+                        currentObjectCollider.tag = "flatHeated";
+                    }
+                    else
+                    {
+                        currentObjectCollider.tag = "done";
+                    }
                     break;
             }
 
 
             currentMaterialIndex = i + 1;
 
+            flatCheck = false;
             yield return new WaitForSeconds(2.0f);//wait 2sec
         }
 

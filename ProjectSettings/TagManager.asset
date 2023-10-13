@@ -10,6 +10,9 @@ TagManager:
   - Hammer
   - flat
   - sharpening
+  - flatHeated
+  - long
+  - blade
   layers:
   - Default
   - TransparentFX

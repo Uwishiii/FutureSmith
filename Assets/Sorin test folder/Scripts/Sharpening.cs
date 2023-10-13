@@ -9,22 +9,33 @@ public class Sharpening : MonoBehaviour
 
     private void Update()
     {
-        if (isInSharpeningZone && gameObject.CompareTag("flat"))
+        if (isInSharpeningZone && gameObject.CompareTag("long"))
         {
             timer += Time.deltaTime;
-            if (timer >= 1f) // Perform an action every second (1 second)
+            Transform cubeTransform = transform;
+            if (timer >= 2f) 
             {
-                // Add your shape-changing action here
-                Debug.Log("works every 1sec");
-                timer = 0f; // Reset the timer
+                cubeTransform.localScale = new Vector3(1.5f, 0.1f, 0.2f);
+               
+            }
+            if (timer >= 4f) 
+            {
+                cubeTransform.localScale = new Vector3(1.5f, 0.05f, 0.1f);
+                
+                gameObject.tag = "blade";
             }
         }
     }
+
+
+
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("sharpening"))
         {
+            
             isInSharpeningZone = true;
             timer = 0f;
             Debug.Log("entered");
