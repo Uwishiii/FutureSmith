@@ -9,13 +9,16 @@ public class LeverControl : MonoBehaviour
     public bool isOn = false;
     public GameObject targetObjectON;
     public GameObject targetObjectOFF;
-
-
+    public GameObject TargetFire;
+    public GameObject TargetSmoke;
+    
 
     void Start()
     {
         targetObjectON.SetActive(false);
         targetObjectOFF.SetActive(true);
+        TargetFire.SetActive(false);
+        TargetSmoke.SetActive(false);
     }
 
 
@@ -31,7 +34,11 @@ public class LeverControl : MonoBehaviour
             targetObjectOFF.SetActive(false);
             //remember to start the heating animation
 
+            TargetFire.SetActive(true);
+            TargetSmoke.SetActive(false);
         }
+
+        
         else if (currentAngle < onAngle && isOn)
         {
             isOn = false;
@@ -40,8 +47,10 @@ public class LeverControl : MonoBehaviour
             targetObjectOFF.SetActive(true);
             //remember to stop the heating animation
 
-
+            TargetFire.SetActive(false);
+            TargetSmoke.SetActive(true);
         }
+
     }
 
 }
