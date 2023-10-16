@@ -50,8 +50,8 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Voronoi_agitation: 1
-    - _Voronoi_power: 2
+    - _Voronoi_agitation: 5
+    - _Voronoi_power: 3
     - _Voronoi_scale: 5
     m_Colors:
     - _Main_color: {r: 0, g: 0.31062227, b: 0.70629567, a: 1}
