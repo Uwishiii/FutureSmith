@@ -13,6 +13,9 @@ TagManager:
   - flatHeated
   - long
   - blade
+  - wood
+  - metal
+  - shield
   layers:
   - Default
   - TransparentFX
