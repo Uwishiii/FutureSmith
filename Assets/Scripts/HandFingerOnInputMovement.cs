@@ -11,12 +11,6 @@ public class HandFingerOnInputMovement : MonoBehaviour
     [SerializeField] InputActionProperty gripAnimationAction;
     [SerializeField] Animator handAnimator;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

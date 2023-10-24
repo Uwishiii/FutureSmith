@@ -7,10 +7,6 @@ public class SnappointScript : MonoBehaviour
 {
     bool snapped = false;
 
-    private void Start()
-    {
-    }
-
     //MAKE SURE TO DISSABLE CONTINUOUS SNAPPING
     //if left to snap it leads to twitching
 

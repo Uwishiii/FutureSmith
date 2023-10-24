@@ -18,49 +18,53 @@ public class HammerHitScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Handle")
+        if (other.gameObject.layer == 9)
         {
-            handleFound = true;
-            colliders.Add(other);
-        }
-        else
-        {
-            handleFound = false;
-        }
+            if (other.name == "Handle" && !handleFound)
+            {
+                handleFound = true;
+                colliders.Add(other);
+            }
+            else
+            {
+                handleFound = false;
+            }
 
-        if (other.name == "Blade")
-        {
-            bladeFound = true;
-            colliders.Add(other);
-        }
-        else
-        {
-            bladeFound = false;
-        }
+            if (other.name == "Blade" && !bladeFound)
+            {
+                bladeFound = true;
+                colliders.Add(other);
+            }
+            else
+            {
+                bladeFound = false;
+            }
 
-        if (other.name == "Guard")
-        {
-            guardFound = true;
-            colliders.Add(other);
-        }
-        else
-        {
-            guardFound = false;
-        }
+            if (other.name == "Guard" && !guardFound)
+            {
+                guardFound = true;
+                colliders.Add(other);
+            }
+            else
+            {
+                guardFound = false;
+            }
 
-        if (bladeFound || guardFound || handleFound)
-        {
-            colliders.Add(other);
+            //if (bladeFound || guardFound || handleFound)
+            //{
+            //    colliders.Add(other);
+            //}
+            //else
+            //{
+            //    colliders.Clear();
+            //}
         }
-        else
-        {
-           colliders.Clear();
-        }
+        
 
         //IMPORTANT!!! -> here the colliders of the children of the objects will also be added
         //since the sword parts also have snap points with colliders the number has to be increased to acomodate for them
         //otherwise we risk to not destroy all parts of the weapon.
-        if (colliders.Count >= 6)
+        if (colliders.Count >= 3)
         {
             SpawnWeapon();
             foreach (var item in colliders)
