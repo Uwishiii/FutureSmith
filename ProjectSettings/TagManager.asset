@@ -16,6 +16,7 @@ TagManager:
   - wood
   - metal
   - shield
+  - FingerTip
   layers:
   - Default
   - TransparentFX
