@@ -17,6 +17,7 @@ TagManager:
   - metal
   - shield
   - FingerTip
+  - longHeated
   layers:
   - Default
   - TransparentFX

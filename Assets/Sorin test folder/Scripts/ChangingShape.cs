@@ -28,24 +28,24 @@ public class ChangingShape : MonoBehaviour
             if (hits == 0)
             {
                 cubeTransform.localScale = new Vector3(0.7f, 0.4f, 0.7f);
-                renderer.material = redMaterial4;
+                //renderer.material = redMaterial4;
             }
             else if (hits == 1)
             {
                 cubeTransform.localScale = new Vector3(0.8f, 0.3f, 0.8f);
-                renderer.material = redMaterial3;
+                //renderer.material = redMaterial3;
             }
             else if (hits == 2)
             {
                 cubeTransform.localScale = new Vector3(0.8f, 0.1f, 0.8f);
-                renderer.material = redMaterial2;
+                //renderer.material = redMaterial2;
                
             }
             else if (hits == 3)
             {
                 cubeTransform.localScale = new Vector3(0.9f, 0.1f, 0.9f);
-                renderer.material = basic;
-                gameObject.tag = "flat";
+                //renderer.material = basic;
+                gameObject.tag = "flatHeated";
             }
 
             hits++; 
@@ -61,24 +61,24 @@ public class ChangingShape : MonoBehaviour
             if (number == 0)
             {
                 cubeTransform.localScale = new Vector3(0.9f, 0.2f, 0.7f);
-                renderer.material = redMaterial4;
+                //renderer.material = redMaterial4;
             }
             else if (number == 1)
             {
                 cubeTransform.localScale = new Vector3(1f, 0.3f, 0.5f);
-                renderer.material = redMaterial3;
+                //renderer.material = redMaterial3;
             }
             else if (number == 2)
             {
                 cubeTransform.localScale = new Vector3(1.3f, 0.2f, 0.2f);
-                renderer.material = redMaterial2;
+                //renderer.material = redMaterial2;
                 
             }
             else if (number == 3)
             {
                 cubeTransform.localScale = new Vector3(1.5f, 0.2f, 0.2f);
-                renderer.material = basic;
-                gameObject.tag = "long";
+                //renderer.material = basic;
+                gameObject.tag = "longHeated";
             }
 
             number++;
