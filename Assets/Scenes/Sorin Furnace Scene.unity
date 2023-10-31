@@ -16641,14 +16641,14 @@ GameObject:
   - component: {fileID: 576586952}
   - component: {fileID: 576586951}
   - component: {fileID: 576586950}
-  - component: {fileID: 576586954}
   - component: {fileID: 576586955}
+  - component: {fileID: 576586954}
   m_Layer: 11
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &576586949
 Transform:
@@ -23808,12 +23808,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532591940}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.7028302, g: 1, b: 0.9633124, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2
   m_Range: 5.454604
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -33028,7 +33028,7 @@ GameObject:
   - component: {fileID: 5334037118507003004}
   - component: {fileID: 4539702729069031587}
   - component: {fileID: 1464247942}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
