@@ -889,7 +889,7 @@ Transform:
   - {fileID: 204503512}
   - {fileID: 496576563}
   m_Father: {fileID: 1500485557}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &111704065
 BoxCollider:
@@ -23625,7 +23625,7 @@ Transform:
   m_Children:
   - {fileID: 821310030}
   m_Father: {fileID: 1500485557}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1359340455
 MonoBehaviour:
@@ -24039,6 +24039,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439531782}
   m_Mesh: {fileID: 2534964839176971238, guid: bb67c6a7bb2e1e540a310a29db340830, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1453106129
 GameObject:
   m_ObjectHideFlags: 0
@@ -24185,6 +24186,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455525015}
   m_Mesh: {fileID: -6402532953415861574, guid: 09c411df8df03ac42bfb522c52989572, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1464247916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24499,7 +24502,6 @@ Transform:
   - {fileID: 6738709148378600167}
   - {fileID: 5943362890078314565}
   - {fileID: 8629810118550893187}
-  - {fileID: 1455525016}
   - {fileID: 1359340454}
   - {fileID: 111704064}
   m_Father: {fileID: 102476486}
