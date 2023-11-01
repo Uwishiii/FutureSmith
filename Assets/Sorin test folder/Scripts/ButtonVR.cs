@@ -9,6 +9,15 @@ public class ButtonVR : MonoBehaviour
     private GameObject cubePrefab;
 
     [SerializeField]
+    private GameObject woodPrefab;
+
+    [SerializeField]
+    private GameObject handlePrefab;
+
+    [SerializeField]
+    private GameObject guardPrefab;
+
+    [SerializeField]
     private GameObject button;
 
     public UnityEvent onPress;
@@ -17,7 +26,9 @@ public class ButtonVR : MonoBehaviour
     private GameObject presser;
     private AudioSource sound;
     private bool isPressed;
-    public int money = 50;
+
+    private static int money = 50;
+
 
     void Start()
     {
@@ -52,6 +63,33 @@ public class ButtonVR : MonoBehaviour
         if (money >= 5)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
+            money -= 5;
+        }
+    }
+
+    public void SpawnWood()
+    {
+        if (money >= 5)
+        {
+            GameObject spawnedWood = Instantiate(woodPrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
+            money -= 5;
+        }
+    }
+
+    public void SpawnHandle()
+    {
+        if (money >= 5)
+        {
+            GameObject spawnedHandle = Instantiate(handlePrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
+            money -= 5;
+        }
+    }
+
+    public void SpawnGuard()
+    {
+        if (money >= 5)
+        {
+            GameObject spawnedGuard = Instantiate(guardPrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
             money -= 5;
         }
     }
