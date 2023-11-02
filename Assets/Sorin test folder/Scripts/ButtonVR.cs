@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class ButtonVR : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class ButtonVR : MonoBehaviour
     private bool isPressed;
 
     private static int money = 50;
+
+    [SerializeField] TMP_Text moneyDisplay;
 
 
     void Start()
@@ -92,5 +95,10 @@ public class ButtonVR : MonoBehaviour
             GameObject spawnedGuard = Instantiate(guardPrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
             money -= 5;
         }
+    }
+
+    private void Update()
+    {
+        moneyDisplay.text = "$: " + money;
     }
 }

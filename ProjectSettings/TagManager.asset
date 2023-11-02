@@ -17,7 +17,11 @@ TagManager:
   - metal
   - shield
   - FingerTip
-  - longHeated
+  - Furnace
+  - Water
+  - Grinder
+  - Handle
+  - Guard
   layers:
   - Default
   - TransparentFX

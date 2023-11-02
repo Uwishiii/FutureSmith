@@ -5,12 +5,13 @@ using UnityEngine;
 public class LeverControl : MonoBehaviour
 {
     public HingeJoint leverHinge;
-    public float onAngle = 45.0f; 
+    public float onAngle = 40.0f; 
     public bool isOn = false;
     public GameObject targetObjectON;
     public GameObject targetObjectOFF;
     public GameObject TargetFire;
     public GameObject TargetSmoke;
+    [SerializeField] Collider furnaceCollider;
     
 
     void Start()
@@ -19,6 +20,7 @@ public class LeverControl : MonoBehaviour
         targetObjectOFF.SetActive(true);
         TargetFire.SetActive(false);
         TargetSmoke.SetActive(false);
+        furnaceCollider.enabled = false;
     }
 
 
@@ -36,6 +38,7 @@ public class LeverControl : MonoBehaviour
 
             TargetFire.SetActive(true);
             TargetSmoke.SetActive(false);
+            furnaceCollider.enabled = true;
         }
 
         
@@ -49,6 +52,7 @@ public class LeverControl : MonoBehaviour
 
             TargetFire.SetActive(false);
             TargetSmoke.SetActive(true);
+            furnaceCollider.enabled = false;
         }
 
     }
