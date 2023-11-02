@@ -24808,11 +24808,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8b6e838920606459b3b1fdbe24586c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  demoSword: {fileID: 279717249686810253, guid: d08c59db2e3ff3c4e9692d24e66cda0c,
-    type: 3}
   hitParticle: {fileID: 5545978586641111170, guid: 2c032f381a24a6946a1c72901556d07c,
     type: 3}
-  colliders: []
 --- !u!65 &1628063139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28460,8 +28457,8 @@ Transform:
   - {fileID: 36980950023712114}
   - {fileID: 4083501150137941953}
   - {fileID: 5680519943093528149}
-  - {fileID: 6085470032945960194}
   - {fileID: 8020492750273603563}
+  - {fileID: 6085470032945960194}
   - {fileID: 7272638918180438211}
   - {fileID: 6628768607783878590}
   - {fileID: 423552231295430564}
@@ -29718,7 +29715,7 @@ MeshCollider:
   m_GameObject: {fileID: 5167793586146304344}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -30784,7 +30781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  direction: {x: -1, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 1}
   onBelt: []
 --- !u!4 &7272638918180438211
 Transform:
@@ -31004,7 +31001,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652277981575}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8059955249093788147
 GameObject:
