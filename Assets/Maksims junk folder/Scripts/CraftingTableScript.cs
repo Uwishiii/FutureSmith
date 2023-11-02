@@ -126,6 +126,7 @@ public class CraftingTableScript : MonoBehaviour
                     {
                         Instantiate(craftableItems[0], itemSpawnPoint.transform.position, Quaternion.identity);
                         ClearItemsOnTable();
+                        LoadDefaults();
                     }
                     break;
                 case 2:
@@ -134,6 +135,7 @@ public class CraftingTableScript : MonoBehaviour
                     {
                         Instantiate(craftableItems[1], itemSpawnPoint.transform.position, Quaternion.identity);
                         ClearItemsOnTable();
+                        LoadDefaults();
                     }
                     break;
                 case 3:
@@ -142,6 +144,7 @@ public class CraftingTableScript : MonoBehaviour
                     {
                         Instantiate(craftableItems[2], itemSpawnPoint.transform.position, Quaternion.identity);
                         ClearItemsOnTable();
+                        LoadDefaults();
                     }
                     break;
                 case 4:
@@ -150,6 +153,7 @@ public class CraftingTableScript : MonoBehaviour
                     {
                         Instantiate(craftableItems[3], itemSpawnPoint.transform.position, Quaternion.identity);
                         ClearItemsOnTable();
+                        LoadDefaults();
                     }
                     break;
             }
@@ -197,6 +201,11 @@ public class CraftingTableScript : MonoBehaviour
         spGuard.SetActive(false);
         spHandle.SetActive(false);
         spShield.SetActive(false);
+
+        partTypeBlade = false;
+        partTypeShield = false;
+        partTypeGuard = false;
+        partTypeHandle = false;
     }
 
     public void ClearItemsOnTable()
