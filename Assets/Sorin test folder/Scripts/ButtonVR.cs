@@ -65,7 +65,7 @@ public class ButtonVR : MonoBehaviour
     {
         if (money >= 5)
         {
-            GameObject spawnedCube = Instantiate(cubePrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
+            GameObject spawnedCube = Instantiate(cubePrefab, new Vector3(0.02f, 2.7f, -1.5f), Quaternion.Euler(0, 90.0f, 0));
             money -= 5;
         }
     }
@@ -74,7 +74,7 @@ public class ButtonVR : MonoBehaviour
     {
         if (money >= 5)
         {
-            GameObject spawnedWood = Instantiate(woodPrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
+            GameObject spawnedWood = Instantiate(woodPrefab, new Vector3(0.02f, 2.7f, -1.5f), Quaternion.Euler(0, 90.0f, 0));
             money -= 5;
         }
     }
@@ -83,7 +83,7 @@ public class ButtonVR : MonoBehaviour
     {
         if (money >= 5)
         {
-            GameObject spawnedHandle = Instantiate(handlePrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
+            GameObject spawnedHandle = Instantiate(handlePrefab, new Vector3(0.02f, 2.7f, -1.5f), Quaternion.Euler(0, 90.0f, 0));
             money -= 5;
         }
     }
@@ -92,7 +92,7 @@ public class ButtonVR : MonoBehaviour
     {
         if (money >= 5)
         {
-            GameObject spawnedGuard = Instantiate(guardPrefab, new Vector3(-0.3f, 1f, -0.6f), Quaternion.Euler(0, 90.0f, 0));
+            GameObject spawnedGuard = Instantiate(guardPrefab, new Vector3(0.02f, 2.7f, -1.5f), Quaternion.Euler(0, 90.0f, 0));
             money -= 5;
         }
     }
