@@ -31,7 +31,7 @@ public class CraftingTableScript : MonoBehaviour
     [SerializeField] GameObject itemSpawnPoint;
 
     [Header("List with Items")]
-    [SerializeField] List<GameObject> craftableItems;
+    public List<GameObject> craftableItems;
     /// <summary>
     /// Since the list is being populated by the prefabs in folder Resources/Items the prefab names will have to abide by alphabetical or numerical ascending order to make sure the correct thing is spawned.
     /// </summary>
@@ -40,6 +40,8 @@ public class CraftingTableScript : MonoBehaviour
 
     //Swords, shields ect. all have a unique itemID
     int itemID = 0;
+    public int craftedItemID = 0;
+    public int craftedItemPrice = 0;
     /// <summary>
     /// ID - item
     /// 1 - Sword
@@ -124,7 +126,8 @@ public class CraftingTableScript : MonoBehaviour
                     //Sword
                     if(partTypeBlade && partTypeGuard && partTypeHandle)
                     {
-                        Instantiate(craftableItems[0], itemSpawnPoint.transform.position, Quaternion.identity);
+                        var item = Instantiate(craftableItems[0], itemSpawnPoint.transform.position, Quaternion.identity);
+                        item.AddComponent<CraftedItemData>().c_itemID = itemID;
                         ClearItemsOnTable();
                         LoadDefaults();
                     }
@@ -133,7 +136,8 @@ public class CraftingTableScript : MonoBehaviour
                     //Sword
                     if (partTypeBlade && partTypeGuard && partTypeHandle)
                     {
-                        Instantiate(craftableItems[1], itemSpawnPoint.transform.position, Quaternion.identity);
+                        var item = Instantiate(craftableItems[1], itemSpawnPoint.transform.position, Quaternion.identity);
+                        item.AddComponent<CraftedItemData>().c_itemID = itemID;
                         ClearItemsOnTable();
                         LoadDefaults();
                     }
@@ -142,7 +146,8 @@ public class CraftingTableScript : MonoBehaviour
                     //Sword
                     if (partTypeBlade && partTypeGuard && partTypeHandle)
                     {
-                        Instantiate(craftableItems[2], itemSpawnPoint.transform.position, Quaternion.identity);
+                        var item = Instantiate(craftableItems[2], itemSpawnPoint.transform.position, Quaternion.identity);
+                        item.AddComponent<CraftedItemData>().c_itemID = itemID;
                         ClearItemsOnTable();
                         LoadDefaults();
                     }
@@ -151,7 +156,8 @@ public class CraftingTableScript : MonoBehaviour
                     //Shield
                     if (partTypeShield && partTypeHandle)
                     {
-                        Instantiate(craftableItems[3], itemSpawnPoint.transform.position, Quaternion.identity);
+                        var item = Instantiate(craftableItems[3], itemSpawnPoint.transform.position, Quaternion.identity);
+                        item.AddComponent<CraftedItemData>().c_itemID = itemID;
                         ClearItemsOnTable();
                         LoadDefaults();
                     }
@@ -206,7 +212,11 @@ public class CraftingTableScript : MonoBehaviour
         partTypeShield = false;
         partTypeGuard = false;
         partTypeHandle = false;
-    }
+
+        itemID = 0;
+        craftedItemID = 0;
+        craftedItemPrice = 0;
+}
 
     public void ClearItemsOnTable()
     {
