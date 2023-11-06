@@ -153,10 +153,20 @@ public class CraftingTableScript : MonoBehaviour
                     }
                     break;
                 case 4:
-                    //Shield
+                    //Sword
                     if (partTypeShield && partTypeHandle)
                     {
                         var item = Instantiate(craftableItems[3], itemSpawnPoint.transform.position, Quaternion.identity);
+                        item.AddComponent<CraftedItemData>().c_itemID = itemID;
+                        ClearItemsOnTable();
+                        LoadDefaults();
+                    }
+                    break;
+                case 5:
+                    //Shield
+                    if (partTypeShield && partTypeHandle)
+                    {
+                        var item = Instantiate(craftableItems[4], itemSpawnPoint.transform.position, Quaternion.identity);
                         item.AddComponent<CraftedItemData>().c_itemID = itemID;
                         ClearItemsOnTable();
                         LoadDefaults();
@@ -190,8 +200,15 @@ public class CraftingTableScript : MonoBehaviour
                 spGuard.SetActive(true);
                 spHandle.SetActive(true);
                 spShield.SetActive(false);
-                break;
+                break; 
             case 4:
+                //Sword
+                spBlade.SetActive(true);
+                spGuard.SetActive(true);
+                spHandle.SetActive(true);
+                spShield.SetActive(false);
+                break;
+            case 5:
                 //Shield
                 spBlade.SetActive(false);
                 spGuard.SetActive(false);
@@ -230,4 +247,5 @@ public class CraftingTableScript : MonoBehaviour
     public void SetItemIDto2() { itemID = 2; }
     public void SetItemIDto3() { itemID = 3; }
     public void SetItemIDto4() { itemID = 4; }
+    public void SetItemIDto5() { itemID = 5; }
 }
