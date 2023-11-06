@@ -63,7 +63,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Aspect_Ration: 0.5
-    - _Big_Scanline_Speed: 0.05
+    - _Big_Scanline_Speed: -0.05
     - _Big_Scanline_Strenght: 0.17
     - _Big_Scanline_Thickness: 0.05
     - _Edge_Glow_Strenght: 0.5
@@ -87,9 +87,9 @@ Material:
     - _USE_SCANLINES: 1
     - _USE_TEXTURE_GLOW: 1
     m_Colors:
-    - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Base_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
     - _Edge_Glow_Thickness: {r: 0.05, g: 0.1, b: 0, a: 0}
-    - _Emmision_Color: {r: 0.19806935, g: 0.27049786, b: 0.66538745, a: 1}
+    - _Emmision_Color: {r: 0.19999997, g: 0.2626671, b: 0.6666667, a: 1}
     - _Glow_Strenght_MinMax: {r: 0, g: 0.25, b: 0, a: 0}
     - _Ripple_Origin: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Scroll_Velocity: {r: 0, g: 0.01, b: 0, a: 0}

@@ -12,15 +12,18 @@ public class CraftedItemData : MonoBehaviour
         switch (c_itemID)
         {
             case 1:
-                sellPrice = 15;
-                break; 
-            case 2:    
-                sellPrice = 15;
-                break; 
-            case 3:    
-                sellPrice = 15;
-                break; 
-            case 4:    
+                sellPrice = 20;
+                break;      
+            case 2:         
+                sellPrice = 20;
+                break;      
+            case 3:         
+                sellPrice = 20;
+                break;     
+            case 4:        
+                sellPrice = 20;
+                break;
+            case 5:    
                 sellPrice = 15;
                 break;
         }
