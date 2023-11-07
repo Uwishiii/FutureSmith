@@ -15,6 +15,11 @@ public class HammerHitScript : MonoBehaviour
     [SerializeField] GameObject hitParticle;
 
     //[SerializeField] List<Collider> colliders = new List<Collider>();
+    AudioSource hitSound;
+    private void Start()
+    {
+        hitSound = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -84,6 +89,7 @@ public class HammerHitScript : MonoBehaviour
         if (other.gameObject.layer == 9)
         {
             var hitParticleInstance = Instantiate(hitParticle, gameObject.transform.position, Quaternion.identity);
+            hitSound.Play();
         }
     }
 }

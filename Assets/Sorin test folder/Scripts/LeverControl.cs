@@ -12,6 +12,8 @@ public class LeverControl : MonoBehaviour
     public GameObject TargetFire;
     public GameObject TargetSmoke;
     [SerializeField] Collider furnaceCollider;
+
+    [SerializeField] AudioSource audio;
     
 
     void Start()
@@ -21,6 +23,8 @@ public class LeverControl : MonoBehaviour
         TargetFire.SetActive(false);
         TargetSmoke.SetActive(false);
         furnaceCollider.enabled = false;
+        audio.Play();
+        audio.Pause();
     }
 
 
@@ -31,7 +35,7 @@ public class LeverControl : MonoBehaviour
         if (currentAngle >= onAngle && !isOn)
         {
             isOn = true;
-            Debug.Log("is ON");
+            //Debug.Log("is ON");
             targetObjectON.SetActive(true);
             targetObjectOFF.SetActive(false);
             //remember to start the heating animation
@@ -39,13 +43,14 @@ public class LeverControl : MonoBehaviour
             TargetFire.SetActive(true);
             TargetSmoke.SetActive(false);
             furnaceCollider.enabled = true;
+            audio.UnPause();
         }
 
         
         else if (currentAngle < onAngle && isOn)
         {
             isOn = false;
-            Debug.Log("is OFF");
+            //Debug.Log("is OFF");
             targetObjectON.SetActive(false);
             targetObjectOFF.SetActive(true);
             //remember to stop the heating animation
@@ -53,6 +58,7 @@ public class LeverControl : MonoBehaviour
             TargetFire.SetActive(false);
             TargetSmoke.SetActive(true);
             furnaceCollider.enabled = false;
+            audio.Pause();
         }
 
     }

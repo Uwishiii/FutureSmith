@@ -227,6 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readyBlade: 0
   readyShield: 0
+  coolParticle: {fileID: 5545978586641111170, guid: 19c544e909734114ba6c470350fab7c9,
+    type: 3}
 --- !u!1 &8511782696513608449
 GameObject:
   m_ObjectHideFlags: 0

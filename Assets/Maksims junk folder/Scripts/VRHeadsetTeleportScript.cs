@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class VRHeadsetTeleportScript : MonoBehaviour
 {
@@ -14,13 +15,20 @@ public class VRHeadsetTeleportScript : MonoBehaviour
     [SerializeField] GameObject humHandLeft;
     [SerializeField] GameObject humHandRight;
 
-    
+    private XRGrabInteractable grab;
+
+    private void Start()
+    {
+        grab = GetComponent<XRGrabInteractable>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 8)
         {
             other.gameObject.transform.position = playerSpawnPoint.transform.position;
+
+            grab.enabled = false;
 
             timer.SetActive(true);
             roboHandLeft.SetActive(true);

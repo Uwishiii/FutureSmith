@@ -9,6 +9,8 @@ public class OrderVisual : MonoBehaviour
     [SerializeField] private List<GameObject> OrderObjList;
     public int wantedItemID;
 
+    public GameObject itemOrderImage;
+
     void Start()
     {
         //Add delay to be able to load the list of item at the start before copying the list.
@@ -33,29 +35,25 @@ public class OrderVisual : MonoBehaviour
         return selectedOrder;
     }
 
-    void SpawnOrder()
+    public void SpawnOrder()
     {
-        GameObject selectedOrderObj = OrderSelect();
-        var itemOrderImage = Instantiate(selectedOrderObj, OrderObjPos);
-
-        #region Configuration
-        itemOrderImage.GetComponent<Rigidbody>().useGravity = false;
-        foreach (Collider item in itemOrderImage.GetComponents<Collider>())
+        if (itemOrderImage == null)
         {
-            item.enabled = false;
+            GameObject selectedOrderObj = OrderSelect();
+            itemOrderImage = Instantiate(selectedOrderObj, OrderObjPos);
+
+            #region Configuration
+            itemOrderImage.GetComponent<Rigidbody>().useGravity = false;
+            foreach (Collider item in itemOrderImage.GetComponents<Collider>())
+            {
+                item.enabled = false;
+            }
+            itemOrderImage.GetComponent<XRGrabInteractable>().enabled = false;
+            itemOrderImage.transform.rotation = Quaternion.Euler(0, 0, 90);
+            itemOrderImage.transform.localScale = new Vector3(100, 100, 100);
+            itemOrderImage.transform.position = OrderObjPos.position;
+            itemOrderImage.AddComponent<Rotation>().RotationVal = new Vector3(50, 0, 0);
+            #endregion
         }
-        itemOrderImage.GetComponent<XRGrabInteractable>().enabled = false;
-        itemOrderImage.transform.rotation = Quaternion.Euler(0,0,90);
-        itemOrderImage.transform.localScale = new Vector3(100, 100, 100);
-        itemOrderImage.transform.position = OrderObjPos.position;
-        itemOrderImage.AddComponent<Rotation>().RotationVal = new Vector3(50, 0, 0);
-        #endregion
-
-    }
-
-    public void ChangeOrder()
-    {
-        OrderSelect();
-        Invoke("SpawnOrder", 0.1f);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TimerScript : MonoBehaviour
 {
@@ -20,6 +20,8 @@ public class TimerScript : MonoBehaviour
     [SerializeField] GameObject humHandLeft;
     [SerializeField] GameObject humHandRight;
     [SerializeField] GameObject roboHandMenu;
+
+    [SerializeField] GameObject vrHeadset;
 
     private bool timerExpired = false;
 
@@ -51,6 +53,7 @@ public class TimerScript : MonoBehaviour
     {
         player.transform.position = playerSpawnPoint.transform.position;
         timeRemaining = 300f;
+        timerExpired = false;
 
         roboHandLeft.SetActive(false);
         roboHandRight.SetActive(false);
@@ -58,6 +61,8 @@ public class TimerScript : MonoBehaviour
 
         humHandLeft.SetActive(true);
         humHandRight.SetActive(true);
+
+        vrHeadset.GetComponent<XRGrabInteractable>().enabled = true;
 
         gameObject.SetActive(false);
     }

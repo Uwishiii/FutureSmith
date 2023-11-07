@@ -59,11 +59,13 @@ public class SellHookAnimationScript : MonoBehaviour
                 foreach (Material mat in m)
                 {
                     var fadeInVal = mat.GetFloat("_FadeIn");
+                    dissolve = fadeInVal;
 
                     if (fadeInVal <= -0.1f)
                     {
                         Destroy(objectInZone.gameObject, 0.1f);
-                        order.ChangeOrder();
+                        Destroy(order.itemOrderImage.gameObject);
+                        order.Invoke("SpawnOrder", 0.1f);
                     }
                     else
                     {

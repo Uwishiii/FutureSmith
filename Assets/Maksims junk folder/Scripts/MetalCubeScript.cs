@@ -46,6 +46,8 @@ public class MetalCubeScript : MonoBehaviour
     [HideInInspector] public bool readyBlade = false;
     [HideInInspector] public bool readyShield = false;
 
+    [SerializeField] GameObject coolParticle;
+
     private void Start()
     {
         //Get cube renderer
@@ -70,6 +72,7 @@ public class MetalCubeScript : MonoBehaviour
         if (!isCooled && collision.gameObject.CompareTag("Water"))
         {
             CubeCooling();
+            collision.GetComponent<AudioSource>().Play();
         }
 
         if (!isHammered && collision.gameObject.CompareTag("Hammer"))
@@ -81,6 +84,7 @@ public class MetalCubeScript : MonoBehaviour
         {
             inSharpening = true;
             CubeSharpening();
+            collision.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -95,6 +99,7 @@ public class MetalCubeScript : MonoBehaviour
         if (other.gameObject.CompareTag("Grinder"))
         {
             inSharpening = false;
+            other.GetComponent<AudioSource>().Pause();
         }
     }
 
@@ -145,8 +150,8 @@ public class MetalCubeScript : MonoBehaviour
     //Change the color of the cube to default to allow sharpening
     private void CubeCooling()
     {
-        //TODO: Instantiate Smoke Particles
-
+        var sPart = Instantiate(coolParticle, gameObject.transform);
+        Destroy(sPart, 1.5f);
         //Get cube renderer
         var cubeRenderer = gameObject.GetComponentInChildren<Renderer>();
 
