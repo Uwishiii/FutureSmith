@@ -6,6 +6,7 @@ public class CraftedItemData : MonoBehaviour
 {
     public int c_itemID;
     public int sellPrice;
+    public int c_wantedItemID;
 
     private void Start()
     {
@@ -27,5 +28,9 @@ public class CraftedItemData : MonoBehaviour
                 sellPrice = 15;
                 break;
         }
+    }
+    private void Update()
+    {
+        c_wantedItemID = GameObject.Find("OrderPos").GetComponent<OrderVisual>().wantedItemID;
     }
 }

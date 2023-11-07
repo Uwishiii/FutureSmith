@@ -40,7 +40,10 @@ public class OrderVisual : MonoBehaviour
 
         #region Configuration
         itemOrderImage.GetComponent<Rigidbody>().useGravity = false;
-        itemOrderImage.GetComponent<BoxCollider>().enabled = false;
+        foreach (Collider item in itemOrderImage.GetComponents<Collider>())
+        {
+            item.enabled = false;
+        }
         itemOrderImage.GetComponent<XRGrabInteractable>().enabled = false;
         itemOrderImage.transform.rotation = Quaternion.Euler(0,0,90);
         itemOrderImage.transform.localScale = new Vector3(100, 100, 100);
@@ -48,5 +51,11 @@ public class OrderVisual : MonoBehaviour
         itemOrderImage.AddComponent<Rotation>().RotationVal = new Vector3(50, 0, 0);
         #endregion
 
+    }
+
+    public void ChangeOrder()
+    {
+        OrderSelect();
+        Invoke("SpawnOrder", 0.1f);
     }
 }

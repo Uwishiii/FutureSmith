@@ -21,6 +21,7 @@ public class ButtonVR : MonoBehaviour
     [SerializeField]
     private GameObject button;
 
+
     public UnityEvent onPress;
     public UnityEvent onRelease;
 
@@ -29,6 +30,7 @@ public class ButtonVR : MonoBehaviour
     private bool isPressed;
 
     private static int money = 50;
+    public int balance;
 
     [SerializeField] TMP_Text moneyDisplay;
 
@@ -100,5 +102,11 @@ public class ButtonVR : MonoBehaviour
     private void Update()
     {
         moneyDisplay.text = "$: " + money;
+    }
+
+    public int AddBalToMoney(int balance)
+    {
+        money += balance;
+        return money;
     }
 }

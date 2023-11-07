@@ -51,6 +51,8 @@ public class CraftingTableScript : MonoBehaviour
     /// </summary>
     /// 
 
+    public int balance = 50;
+
     private void Start()
     {
         LoadDefaults();
@@ -154,7 +156,7 @@ public class CraftingTableScript : MonoBehaviour
                     break;
                 case 4:
                     //Sword
-                    if (partTypeShield && partTypeHandle)
+                    if (partTypeBlade && partTypeGuard && partTypeHandle)
                     {
                         var item = Instantiate(craftableItems[3], itemSpawnPoint.transform.position, Quaternion.identity);
                         item.AddComponent<CraftedItemData>().c_itemID = itemID;

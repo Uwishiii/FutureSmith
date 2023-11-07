@@ -15,6 +15,12 @@ public class TimerScript : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+    [SerializeField] GameObject roboHandLeft;
+    [SerializeField] GameObject roboHandRight;
+    [SerializeField] GameObject humHandLeft;
+    [SerializeField] GameObject humHandRight;
+    [SerializeField] GameObject roboHandMenu;
+
     private bool timerExpired = false;
 
     private void FixedUpdate()
@@ -43,6 +49,16 @@ public class TimerScript : MonoBehaviour
 
     private void TeleportPlayerToSpawn()
     {
-     player.transform.position = playerSpawnPoint.transform.position; 
+        player.transform.position = playerSpawnPoint.transform.position;
+        timeRemaining = 300f;
+
+        roboHandLeft.SetActive(false);
+        roboHandRight.SetActive(false);
+        roboHandMenu.SetActive(false);
+
+        humHandLeft.SetActive(true);
+        humHandRight.SetActive(true);
+
+        gameObject.SetActive(false);
     }
 }

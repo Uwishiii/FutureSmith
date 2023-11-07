@@ -5,23 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cube
-  - Sphere
-  - done
   - Hammer
-  - flat
-  - sharpening
-  - flatHeated
-  - long
-  - blade
-  - wood
-  - metal
-  - shield
   - FingerTip
   - Furnace
   - Water
   - Grinder
   - Handle
   - Guard
+  - SellHook
   layers:
   - Default
   - TransparentFX
