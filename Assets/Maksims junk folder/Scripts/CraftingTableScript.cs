@@ -58,7 +58,7 @@ public class CraftingTableScript : MonoBehaviour
         LoadDefaults();
 
         //Load all items from folder Resources/Items
-        craftableItems = new List<GameObject>(Resources.LoadAll<GameObject>("Items"));
+        //craftableItems = new List<GameObject>(Resources.LoadAll<GameObject>("Items"));
 
 
     }

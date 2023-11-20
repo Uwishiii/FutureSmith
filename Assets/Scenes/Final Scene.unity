@@ -1523,6 +1523,41 @@ PrefabInstance:
       propertyPath: itemSpawnPoint
       value: 
       objectReference: {fileID: 591259469}
+    - target: {fileID: 2051458755032564780, guid: 061d984d4c75adf488e3dc2c2f802324,
+        type: 3}
+      propertyPath: craftableItems.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051458755032564780, guid: 061d984d4c75adf488e3dc2c2f802324,
+        type: 3}
+      propertyPath: craftableItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 7337972265276581441, guid: ba0cf30791e39214f97eab1db1f28d0b,
+        type: 3}
+    - target: {fileID: 2051458755032564780, guid: 061d984d4c75adf488e3dc2c2f802324,
+        type: 3}
+      propertyPath: craftableItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 4052836546719792796, guid: 984a10d72829576429bef00197053c8f,
+        type: 3}
+    - target: {fileID: 2051458755032564780, guid: 061d984d4c75adf488e3dc2c2f802324,
+        type: 3}
+      propertyPath: craftableItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 7980176405142146113, guid: d774858e5d9aac245905ebf5ee01f7eb,
+        type: 3}
+    - target: {fileID: 2051458755032564780, guid: 061d984d4c75adf488e3dc2c2f802324,
+        type: 3}
+      propertyPath: craftableItems.Array.data[3]
+      value: 
+      objectReference: {fileID: 3386059579365751168, guid: 79be09c0dcb94674ebfea988bde733fd,
+        type: 3}
+    - target: {fileID: 2051458755032564780, guid: 061d984d4c75adf488e3dc2c2f802324,
+        type: 3}
+      propertyPath: craftableItems.Array.data[4]
+      value: 
+      objectReference: {fileID: 6622044101474918406, guid: a06c0758719480141accfb91cd619ba6,
+        type: 3}
     - target: {fileID: 4917419470482957174, guid: 061d984d4c75adf488e3dc2c2f802324,
         type: 3}
       propertyPath: m_Name
@@ -2007,6 +2042,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2598953970025383966, guid: ae5aa4d444112fe41b4af3e7d8f5390a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598953970025383966, guid: ae5aa4d444112fe41b4af3e7d8f5390a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598953970025383966, guid: ae5aa4d444112fe41b4af3e7d8f5390a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18
+      objectReference: {fileID: 0}
     - target: {fileID: 2598953970316632676, guid: ae5aa4d444112fe41b4af3e7d8f5390a,
         type: 3}
       propertyPath: m_RootOrder
@@ -2081,6 +2131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScreenHologramMenu 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598953970492301022, guid: ae5aa4d444112fe41b4af3e7d8f5390a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2598953970734547873, guid: ae5aa4d444112fe41b4af3e7d8f5390a,
         type: 3}
@@ -4418,7 +4473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15.2}
+  m_AnchoredPosition: {x: 0, y: -12}
   m_SizeDelta: {x: 100.1, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565486814
@@ -4455,7 +4510,10 @@ MonoBehaviour:
 
     Step 6: Cool the metal
 
-    Step 7: Grind the metal'
+    Step 7: Grind the metal
+
+    Step
+    8: Give it to floating diamond'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4482,8 +4540,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7247,7 +7305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08bc56d9fc1a13648bb5b86b91a8b564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 50
   direction: {x: 1, y: 0, z: 0}
   onBelt: []
 --- !u!1 &919259245
@@ -8624,6 +8682,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4779e30f60b69834c9e9df52b98554f1, type: 2}
+    - target: {fileID: 2319195963970201927, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319195963970201927, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.152
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319195963970201927, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.069
+      objectReference: {fileID: 0}
     - target: {fileID: 2351162482552426502, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8984,6 +9057,21 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 7958528941814097448, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528941814097448, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.924
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528941814097448, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.037
+      objectReference: {fileID: 0}
     - target: {fileID: 7958528941814097449, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9127,10 +9215,30 @@ PrefabInstance:
       propertyPath: moneyDisplay
       value: 
       objectReference: {fileID: 1124893686}
+    - target: {fileID: 7958528942575830776, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528942575830776, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.924
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528942575830776, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.037
+      objectReference: {fileID: 0}
     - target: {fileID: 7958528942575830777, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528942601636551, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7958528942601636551, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
         type: 3}
@@ -9294,6 +9402,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528943437392513, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.309
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528943437392513, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.924
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958528943437392513, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.037
       objectReference: {fileID: 0}
     - target: {fileID: 7958528943437392518, guid: 866eeb5e25bbc0242be0ba79dcfb29c7,
         type: 3}
@@ -9969,7 +10092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d90fb81b245d844bc8146f15d65c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 300
+  timeRemaining: 600
   timerText: {fileID: 1104064373}
   playerSpawnPoint: {fileID: 1736830027}
   player: {fileID: 1887019656903020113}
